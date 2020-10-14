@@ -13,14 +13,18 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if (Input.GetKey (KeyCode.W))   {transform.Translate (0.0f, 0.25f, 0.0f);
+        //Border
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -5.75f, 5.75f),
+       Mathf.Clamp(transform.position.y, -1f,7.75f),transform.position.z);    
+
+        //Movement
+        if (Input.GetKey (KeyCode.W))   {transform.Translate (0.0f, 0.15f, 0.0f);
         }
-        if (Input.GetKey (KeyCode.S))   {transform.Translate (0.0f, -0.25f,0.0f);
+        if (Input.GetKey (KeyCode.S))   {transform.Translate (0.0f, -0.15f,0.0f);
         }
-        if (Input.GetKey (KeyCode.D))   {transform.Translate (0.25f, 0.0f, 0.0f);
+        if (Input.GetKey (KeyCode.D))   {transform.Translate (0.15f, 0.0f, 0.0f);
         }
-        if (Input.GetKey (KeyCode.A))   {transform.Translate (-0.25f, 0.0f, 0.0f);
+        if (Input.GetKey (KeyCode.A))   {transform.Translate (-0.15f, 0.0f, 0.0f);
         }
         
     }
