@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
         
@@ -18,13 +17,13 @@ public class Movement : MonoBehaviour
        Mathf.Clamp(transform.position.y, -1f,7.75f),transform.position.z);    
 
         //Movement
-        if (Input.GetKey (KeyCode.W))   {transform.Translate (0.0f, 0.15f, 0.0f);
+        if (Input.GetKey (KeyCode.W))   {transform.Translate (0.0f, 0.03f, 0.0f);
         }
-        if (Input.GetKey (KeyCode.S))   {transform.Translate (0.0f, -0.15f,0.0f);
+        if (Input.GetKey (KeyCode.S))   {transform.Translate (0.0f, -0.03f,0.0f);
         }
-        if (Input.GetKey (KeyCode.D))   {transform.Translate (0.15f, 0.0f, 0.0f);
+        if (Input.GetKey (KeyCode.D))   {transform.Translate (0.03f, 0.0f, 0.0f);
         }
-        if (Input.GetKey (KeyCode.A))   {transform.Translate (-0.15f, 0.0f, 0.0f);
+        if (Input.GetKey (KeyCode.A))   {transform.Translate (-0.03f, 0.0f, 0.0f);
         }
         
     }
