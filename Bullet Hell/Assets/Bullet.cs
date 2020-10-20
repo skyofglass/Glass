@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float speed = 50.0f;
+    public float speed = 1.0f;
     private Rigidbody2D rb;
+    public GameObject explosion;
+    private Vector3 AimPoint;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(speed*2, 0);
-       
+        rb.AddForce(transform.up * speed, ForceMode2D.Impulse);
+       AimPoint = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
+       AimPoint.z = 0;
+       AimPoint.Normalize();
         
 
     }
@@ -20,5 +25,19 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
+    transform.position = transform.position + AimPoint * speed* Time.deltaTime;
+    Destroy(gameObject, 10);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other){
+        if(other.tag == "enemy"){
+                GameObject e = Instantiate(explosion) as GameObject;
+                e.transform.position = transform.position;
+                Destroy(other.gameObject);
+                Destroy(this.gameObject);
+
+                
+
+        }
     }
 }
