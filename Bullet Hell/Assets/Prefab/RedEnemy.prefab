@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5879078131401897848}
   - component: {fileID: 1782625507823459863}
   - component: {fileID: -1497064651119818843}
+  - component: {fileID: -2412315956258658709}
   m_Layer: 0
   m_Name: RedEnemy
   m_TagString: Untagged
@@ -120,3 +121,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 14.148941
+--- !u!114 &-2412315956258658709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8441276758934080225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2d6823236e9be145b1e15bdd12ce3ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExplosionRed: {fileID: 2827995520692879905, guid: 6b241b794bbd7ad4cb413d85e8406cd4,
+    type: 3}
+  flashtime: 0.1

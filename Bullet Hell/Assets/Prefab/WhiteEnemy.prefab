@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8045920013365365402}
   - component: {fileID: 3632653324042050572}
   - component: {fileID: 6486630282799239019}
+  - component: {fileID: -937197015816873052}
   m_Layer: 0
   m_Name: WhiteEnemy
   m_TagString: Untagged
@@ -95,12 +96,12 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
@@ -120,3 +121,17 @@ CircleCollider2D:
   m_Offset: {x: 0.05754471, y: 0}
   serializedVersion: 2
   m_Radius: 14.321613
+--- !u!114 &-937197015816873052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5776317136588343055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c062fef5606214b49ae951993661443d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExplosionWhite: {fileID: 9064499570309956416, guid: 3a3e27ad02b97e1479cfec9af1667067,
+    type: 3}

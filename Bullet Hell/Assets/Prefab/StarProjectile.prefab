@@ -146,7 +146,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  explosion: {fileID: 0}
+  ExplosionWhite: {fileID: 9064499570309956416, guid: 3a3e27ad02b97e1479cfec9af1667067,
+    type: 3}
 --- !u!58 &-6565375444647929685
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour
 {
     public float speed = 1.0f;
     private Rigidbody2D rb;
-    public GameObject explosion;
+    public GameObject ExplosionWhite;
     private Vector3 AimPoint;
 
     // Start is called before the first frame update
@@ -17,7 +17,8 @@ public class Bullet : MonoBehaviour
        AimPoint = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
        AimPoint.z = 0;
        AimPoint.Normalize();
-        
+    //Setting Enemy Tag
+        gameObject.tag = "Bullet";  
 
     }
 
@@ -28,16 +29,7 @@ public class Bullet : MonoBehaviour
     transform.position = transform.position + AimPoint * speed* Time.deltaTime;
     Destroy(gameObject, 10);
     }
-
-    private void OnTriggerEnter2D(Collider2D other){
-        if(other.tag == "enemy"){
-                GameObject e = Instantiate(explosion) as GameObject;
-                e.transform.position = transform.position;
-                Destroy(other.gameObject);
-                Destroy(this.gameObject);
-
                 
 
-        }
-    }
-}
+    
+ }

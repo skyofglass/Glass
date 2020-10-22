@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2886322365674078817}
   - component: {fileID: 5248146547887166328}
   - component: {fileID: 5138922267494044213}
-  - component: {fileID: -3578589214918255565}
   - component: {fileID: 5061544929242061098}
+  - component: {fileID: -7023580945219527410}
   m_Layer: 0
   m_Name: BlueEnemy
   m_TagString: Untagged
@@ -105,32 +105,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &-3578589214918255565
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5820117151938943835}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.15520477, y: 0.1837964}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 40.96, y: 40.96}
-    newSize: {x: 40.96, y: 40.96}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 25.746723, y: 24.580536}
-  m_EdgeRadius: 0
 --- !u!58 &5061544929242061098
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -147,3 +121,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.19347191}
   serializedVersion: 2
   m_Radius: 14.095945
+--- !u!114 &-7023580945219527410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5820117151938943835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab8caa4ae1da68a48a5d83832a98224c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExplosionBlue: {fileID: 8917849922210071394, guid: ce0cfa3897f36184cbe006fb7658fdd3,
+    type: 3}
+  flashtime: 0.1
