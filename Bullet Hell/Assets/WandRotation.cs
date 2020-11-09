@@ -9,7 +9,12 @@ public class WandRotation : MonoBehaviour
     public Transform target;
     private Vector3 object_pos;
     private float angle;
+    static public Transform TransformReference;
     // Start is called before the first frame update
+    void Awake(){
+        TransformReference = transform;
+    }
+
     void Start()
     {
         
